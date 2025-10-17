@@ -1,21 +1,23 @@
-Professor , fiz aqui no GitHub porque não tava conseguindo enviar o link
+# Número secreto definido pelo programador
+numero_secreto = 42
 
-Kauê  Henrique Vinisqui Ferraz Da Silva
-Capitão Scanduizzi
-Aramina, SP 14550000
-kauevinisqui15@gmail.com
-Resumo profissional
-Profissional eficiente e com boas habilidades de relacionamento interpessoal, que contribuem para a prestação de um serviço de excelência e para o suporte à equipe em tarefas diversas, visando colaborar efetivamente com a rotina de trabalho.
-Formação acadêmica
-Janeiro 2024
-Fábio José de Araújo  Aramina, SP
-Informatica
-Habilidades e competências
-Empatia diante das necessidades alheias
-Bom relacionamento interpessoal para trabalho em equipe
-Zelo pela higiene e organização do local de trabalho
-Habilidade com aplicativos de mensagens e redes sociais
-Disposição para o aprendizado e aprimoramento contínuos
-Comprometimento com as normas e regulamentos da empresa
-Conhecimentos em informática básica
-Determinação e persistência para o alcance de metas
+print("=== Jogo da Adivinhação ===")
+print("Tente adivinhar o número secreto! Você tem 5 tentativas.")
+
+# O jogador tem 5 tentativas para acertar
+for tentativa in range(1, 6):
+    palpite = int(input(f"Tentativa {tentativa}: Digite seu palpite: "))
+
+    if palpite == numero_secreto:
+        print("🎉 Parabéns! Você acertou o número secreto!")
+        break
+    elif palpite > numero_secreto:
+        print("O número secreto é menor que isso.")
+    else:
+        print("O número secreto é maior que isso.")
+
+    # Se for a última tentativa e ainda não acertou
+    if tentativa == 5:
+        print("😢 Suas tentativas acabaram. Você perdeu!")
+        print(f"O número secreto era {numero_secreto}.")
+    
